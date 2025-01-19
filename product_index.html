@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html itemscope itemtype="https://schema.org/WebSite" lang="vi">  
+<head>
+    <title>kaiso.vn</title>
+    <meta charset="UTF-8">
+    <meta name="robots" content="INDEX,FOLLOW">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/page-1.0.1.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script language="javascript" src="js/jquery.min.js"></script>
+	<script language="javascript" src="js/slick.min.js"></script>
+</head>
+<body>
+	<div class="wrapper" id="wrapper">
+		<header class="header" id="header">
+			<div class="top_hdr fixf">
+				<div class="container">
+					<h1 class="logo">
+						<a href=""><img src="img/logo.png" alt="">đây là logo của bạn</a>
+					</h1>
+					<div class="slogan m-off">
+						<img src="img/slogan.png" alt="">
+					</div> 
+					<h2 class="hotline pull_right m-off">			
+						Hotline:<a href="" rel="nofollow">0917.578.677</a> 
+					</h2>
+				</div>
+			</div> 
+			<div class="bot_hdr fixf">
+				<div class="container">
+					<nav>
+						<div class="row">
+							<ul class="nav_lv0 t-off m-off">
+								<li class="active"><a href="index.html" rel="nofollow">Trang chủ</a></li>
+								<li><a href="">Giới thiệu</a></li>
+								<li><a href="product_index.html">Kiến trúc</a>
+									<ul class="nav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li><a href="product_index.html">Nội thất</a>
+									<ul class="nav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li><a href="product_index.html">Cảnh quan</a></li>
+								<li><a href="news_index.html">Kiến thức</a>
+									<ul class="nav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li><a href="news_index.html">Phong thủy</a></li>
+								<li><a href="news_index.html">Tin tức</a></li>
+								<li><a href="news_index.html">Tuyển dụng</a></li>
+								<li><a href="contact_index.html">Liên hệ</a></li>
+							</ul>
+							<div class="bar"><span><i class="fa fa-bars" aria-hidden="true"></i></span></div>
+							<ul class="mnav_lv0">
+								<li><a href="" rel="nofollow">Trang chủ</a></li>
+								<li class="hv"><a href="">Kiến trúc</a>
+									<ul class="mnav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li class="hv"><a href="">Nội thất</a>
+									<ul class="mnav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li><a href="">Cảnh quan</a></li>
+								<li class="hv"><a href="">Kiến thức</a>
+									<ul class="mnav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li><a href="">Phong thủy</a></li>
+								<li><a href="">Tin tức</a></li>
+								<li><a href="">Tuyển dụng</a></li>
+								<li><a href="">Liên hệ</a></li>
+							</ul>
+							<script>
+								$(".bar>span").click(function(){
+									$(".mnav_lv0").toggleClass("dropdown");
+								});
+								$(".hv>a").click(function(event){
+									event.preventDefault();
+									if($(this).parent().hasClass("dropdown")){
+										$(this).parent().removeClass("dropdown");
+										$(this).siblings().children().removeClass("dropdown");
+									}else{
+										$(this).parent().addClass("dropdown");
+										$(this).parent().siblings().removeClass("dropdown");
+										$(this).parent().siblings().children().children().removeClass("dropdown");
+									}
+									return false;
+								});
+								$(document).mouseup(function (e){
+									var container = $('.mnav_lv0 , .bar');
+									if (!container.is(e.target) && container.has(e.target).length === 0){
+										$('.mnav_lv0').removeClass('dropdown');
+									}
+								});
+							</script>
+							<form action="" method="get" class="form_search pull_right plr10">
+								<input type="text" name="q" placeholder="Nhập từ khóa tìm...">
+								<button type="submit" class="btn_st2"><i class="fa fa-search"></i></button>
+							</form>
+						</div>
+					</nav>
+				</div>
+			</div> 
+			<script>
+				$(window).bind('resize , load',function(){
+					var nav = $('.bot_hdr'),
+					height = $('.top_hdr').innerHeight();
+					$(window).scroll(function () {
+						if ($(this).scrollTop() > height) {
+							nav.addClass("f-nav");
+						} else {
+							nav.removeClass("f-nav");
+						}
+					});
+				});
+			</script>
+		</header>
+		<div class="content_for_layout clearfix" id="main">
+			<div class="breadcrumb">
+				<div class="container">
+					<ul class="fixf">
+						<li><a href="">Trang chủ</a></li>
+						<li> Dự án</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="container">
+				<div class="block_cate fixf">
+					<div class="head_cate head text-center fixf pt5 pb25 mb30">
+						<h3 class="title_st1 text-upper">Dự án</h3>
+					</div>
+					<ul class="menu_news text-center fixf mb30">
+						<li class="current"><a href="">Dự án biệt thự nhà phố</a></li>
+						<li><a href="">Dự án thiết kế nội thất</a></li>
+						<li><a href="">Dự án khách sạn/nhà hàng</a></li>
+					</ul>
+					<div class="body_cate fixf mb20">
+						<div class="row15">
+							<div class="wrapper_prd span4 span-m6 plr15 mb30">
+								<div class="item_prd fixf border_prd">
+									<div class="image fixf">
+										<a href="" title="" class="pa3x2"><img src="img/20.jpg" alt="" class="fit-content"></a>
+									</div>
+									<div class="info fixf p15">
+										<h4 class="lmh40"><a class="title_prd" href="" title="">Bố trí nội thất căn hộ A17.06 Hưng Phúc, PMH, Quận 7 - Nhà anh Định</a></h4>
+									</div>
+								</div>
+							</div>
+							<div class="wrapper_prd span4 span-m6 plr15 mb30">
+								<div class="item_prd fixf border_prd">
+									<div class="image fixf">
+										<a href="" title="" class="pa3x2"><img src="img/20.jpg" alt="" class="fit-content"></a>
+									</div>
+									<div class="info fixf p15">
+										<h4 class="lmh40"><a class="title_prd" href="" title="">Bố trí nội thất căn hộ A17.06 Hưng Phúc, PMH, Quận 7 - Nhà anh Định</a></h4>
+									</div>
+								</div>
+							</div>
+							<div class="wrapper_prd span4 span-m6 plr15 mb30">
+								<div class="item_prd fixf border_prd">
+									<div class="image fixf">
+										<a href="" title="" class="pa3x2"><img src="img/20.jpg" alt="" class="fit-content"></a>
+									</div>
+									<div class="info fixf p15">
+										<h4 class="lmh40"><a class="title_prd" href="" title="">Bố trí nội thất căn hộ A17.06 Hưng Phúc, PMH, Quận 7 - Nhà anh Định</a></h4>
+									</div>
+								</div>
+							</div>
+							<div class="wrapper_prd span4 span-m6 plr15 mb30">
+								<div class="item_prd fixf border_prd">
+									<div class="image fixf">
+										<a href="" title="" class="pa3x2"><img src="img/20.jpg" alt="" class="fit-content"></a>
+									</div>
+									<div class="info fixf p15">
+										<h4 class="lmh40"><a class="title_prd" href="" title="">Bố trí nội thất căn hộ A17.06 Hưng Phúc, PMH, Quận 7 - Nhà anh Định</a></h4>
+									</div>
+								</div>
+							</div>
+							<div class="wrapper_prd span4 span-m6 plr15 mb30">
+								<div class="item_prd fixf border_prd">
+									<div class="image fixf">
+										<a href="" title="" class="pa3x2"><img src="img/20.jpg" alt="" class="fit-content"></a>
+									</div>
+									<div class="info fixf p15">
+										<h4 class="lmh40"><a class="title_prd" href="" title="">Bố trí nội thất căn hộ A17.06 Hưng Phúc, PMH, Quận 7 - Nhà anh Định</a></h4>
+									</div>
+								</div>
+							</div>
+							<div class="wrapper_prd span4 span-m6 plr15 mb30">
+								<div class="item_prd fixf border_prd">
+									<div class="image fixf">
+										<a href="" title="" class="pa3x2"><img src="img/20.jpg" alt="" class="fit-content"></a>
+									</div>
+									<div class="info fixf p15">
+										<h4 class="lmh40"><a class="title_prd" href="" title="">Bố trí nội thất căn hộ A17.06 Hưng Phúc, PMH, Quận 7 - Nhà anh Định</a></h4>
+									</div>
+								</div>
+							</div>
+							<div class="wrapper_prd span4 span-m6 plr15 mb30">
+								<div class="item_prd fixf border_prd">
+									<div class="image fixf">
+										<a href="" title="" class="pa3x2"><img src="img/20.jpg" alt="" class="fit-content"></a>
+									</div>
+									<div class="info fixf p15">
+										<h4 class="lmh40"><a class="title_prd" href="" title="">Bố trí nội thất căn hộ A17.06 Hưng Phúc, PMH, Quận 7 - Nhà anh Định</a></h4>
+									</div>
+								</div>
+							</div>
+							<div class="wrapper_prd span4 span-m6 plr15 mb30">
+								<div class="item_prd fixf border_prd">
+									<div class="image fixf">
+										<a href="" title="" class="pa3x2"><img src="img/20.jpg" alt="" class="fit-content"></a>
+									</div>
+									<div class="info fixf p15">
+										<h4 class="lmh40"><a class="title_prd" href="" title="">Bố trí nội thất căn hộ A17.06 Hưng Phúc, PMH, Quận 7 - Nhà anh Định</a></h4>
+									</div>
+								</div>
+							</div>
+							<div class="wrapper_prd span4 span-m6 plr15 mb30">
+								<div class="item_prd fixf border_prd">
+									<div class="image fixf">
+										<a href="" title="" class="pa3x2"><img src="img/20.jpg" alt="" class="fit-content"></a>
+									</div>
+									<div class="info fixf p15">
+										<h4 class="lmh40"><a class="title_prd" href="" title="">Bố trí nội thất căn hộ A17.06 Hưng Phúc, PMH, Quận 7 - Nhà anh Định</a></h4>
+									</div>
+								</div>
+							</div>
+							<div class="wrapper_prd span4 span-m6 plr15 mb30">
+								<div class="item_prd fixf border_prd">
+									<div class="image fixf">
+										<a href="" title="" class="pa3x2"><img src="img/20.jpg" alt="" class="fit-content"></a>
+									</div>
+									<div class="info fixf p15">
+										<h4 class="lmh40"><a class="title_prd" href="" title="">Bố trí nội thất căn hộ A17.06 Hưng Phúc, PMH, Quận 7 - Nhà anh Định</a></h4>
+									</div>
+								</div>
+							</div>
+							<div class="wrapper_prd span4 span-m6 plr15 mb30">
+								<div class="item_prd fixf border_prd">
+									<div class="image fixf">
+										<a href="" title="" class="pa3x2"><img src="img/20.jpg" alt="" class="fit-content"></a>
+									</div>
+									<div class="info fixf p15">
+										<h4 class="lmh40"><a class="title_prd" href="" title="">Bố trí nội thất căn hộ A17.06 Hưng Phúc, PMH, Quận 7 - Nhà anh Định</a></h4>
+									</div>
+								</div>
+							</div>
+							<div class="wrapper_prd span4 span-m6 plr15 mb30">
+								<div class="item_prd fixf border_prd">
+									<div class="image fixf">
+										<a href="" title="" class="pa3x2"><img src="img/20.jpg" alt="" class="fit-content"></a>
+									</div>
+									<div class="info fixf p15">
+										<h4 class="lmh40"><a class="title_prd" href="" title="">Bố trí nội thất căn hộ A17.06 Hưng Phúc, PMH, Quận 7 - Nhà anh Định</a></h4>
+									</div>
+								</div>
+							</div>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer" id="footer">
+			<div class="top_ft fixf">
+				<div class="container">
+					<div class="row">
+						<div class="span6 span-t12 span-m12">
+							<div class="span7 span-t6 span-m12 plr10 mb20">
+								<h3 class="title_ft text-upper mb10">CÔNG TY CÔNG NGHỆ VÀ TRUYỀN THÔNG DIM GROUP</h3>
+								<div class="info">							
+									<p>Địa chỉ: số 19/52 đình bảng, từ sơn, bắc ninh.</p>
+									<p>hotline: 098 851 156</p>
+									<p>Email: support@dim.vn</p>
+									<p>website: d68.vn</p>
+								</div>						
+							</div>
+							<div class="span5 span-t6 span-m12 plr10 mb20">
+								<h3 class="title_ft text-upper mb10">Chính sách</h3>
+								<ul class="list_link">
+									<li><a href="">Chính sách đổi sản phẩm</a></li>
+									<li><a href="">Chính sách đổi sản phẩm</a></li>
+									<li><a href="">Chính sách đổi sản phẩm</a></li>
+									<li><a href="">Chính sách đổi sản phẩm</a></li>
+									<li><a href="">Chính sách đổi sản phẩm</a></li>							
+								</ul>						
+							</div>
+						</div>
+						<div class="span6 span-t12 span-m12">
+							<div class="span5 span-t6 span-m12 plr10 mb20">
+								<h3 class="title_ft text-upper mb10">Liên kết</h3>
+								<ul class="social_group fixf">
+									<li><a href="" class="sc_facebook"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="" class="sc_twitter"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="" class="sc_google"><i class="fa fa-google-plus"></i></a></li>
+									<li><a href="" class="sc_youtube"><i class="fa fa-youtube"></i></a></li>							
+								</ul>						
+							</div>
+							<div class="span7 span-t6 span-m12 plr10 mb20">
+								<h3 class="title_ft text-upper mb10">Fanpage</h3>
+								<div class="fixf">
+									<div class="fb-page fix_wfb" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bot_ft fixf">
+				<div class="container">
+					<p>© Copyright Dimgroup</p>
+					<p style="float:right">Design by <a href="http://dim.vn/" target="_blank" style="color:#fff">DIM Group</a></p>
+				</div>
+			</div>
+		</footer>
+		<div class="move_control">
+			<a href="#top" class="scroll_top"><i class="fa fa-chevron-up"></i></a>
+		</div>
+		<div id="fb-root"></div>
+		<script>
+		function fixwfb(){
+			$('.fix_wfb').each(function(){
+			   $(this).attr('data-width',$(this).parent().width());
+			});
+		}
+		$(window).bind('ready resize load',function(){
+			fixwfb();
+		});
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		$("a[href='#top']").click(function() {
+			$("html, body").animate({ scrollTop: 0 },"fast");
+			return false;
+		});
+		$(window).scroll(function(){
+			var scroll=$(window).scrollTop(); 
+			if(scroll>=100){
+				$(".scroll_top").addClass("show2"); 
+				$(".scroll_bot").addClass("show2")}else{$(".scroll_top").removeClass("show2")
+			}
+		});
+		</script>
+	</div>
+</body>
+</html>

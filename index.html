@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html itemscope itemtype="https://schema.org/WebSite" lang="vi">  
+<head>
+    <title>kaiso.vn</title>
+    <meta charset="UTF-8">
+    <meta name="robots" content="INDEX,FOLLOW">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/page-1.0.2.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script language="javascript" src="js/jquery.min.js"></script>
+	<script language="javascript" src="js/slick.min.js"></script>
+</head>
+<body>
+	<div class="wrapper" id="wrapper">
+		<header class="header" id="header">
+			<div class="top_hdr fixf">
+				<div class="container">
+					<h1 class="logo">
+						<a href=""><img src="img/logo.png" alt="">đây là logo của bạn</a>
+					</h1>
+					<div class="slogan m-off">
+						<img src="img/slogan.png" alt="">
+					</div> 
+					<h2 class="hotline pull_right m-off">			
+						Hotline:<a href="" rel="nofollow">0917.578.677</a> 
+					</h2>
+				</div>
+			</div> 
+			<div class="bot_hdr fixf">
+				<div class="container">
+					<nav>
+						<div class="row">
+							<ul class="nav_lv0 t-off m-off">
+								<li class="active"><a href="index.html" rel="nofollow">Trang chủ</a></li>
+								<li><a href="">Giới thiệu</a></li>
+								<li><a href="product_index.html">Kiến trúc</a>
+									<ul class="nav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li><a href="product_index.html">Nội thất</a>
+									<ul class="nav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li><a href="product_index.html">Cảnh quan</a></li>
+								<li><a href="news_index.html">Kiến thức</a>
+									<ul class="nav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li><a href="news_index.html">Phong thủy</a></li>
+								<li><a href="news_index.html">Tin tức</a></li>
+								<li><a href="news_index.html">Tuyển dụng</a></li>
+								<li><a href="contact_index.html">Liên hệ</a></li>
+							</ul>
+							<div class="bar"><span><i class="fa fa-bars" aria-hidden="true"></i></span></div>
+							<ul class="mnav_lv0">
+								<li><a href="" rel="nofollow">Trang chủ</a></li>
+								<li class="hv"><a href="">Kiến trúc</a>
+									<ul class="mnav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li class="hv"><a href="">Nội thất</a>
+									<ul class="mnav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li><a href="">Cảnh quan</a></li>
+								<li class="hv"><a href="">Kiến thức</a>
+									<ul class="mnav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li><a href="">Phong thủy</a></li>
+								<li><a href="">Tin tức</a></li>
+								<li><a href="">Tuyển dụng</a></li>
+								<li><a href="">Liên hệ</a></li>
+							</ul>
+							<script>
+								$(".bar>span").click(function(){
+									$(".mnav_lv0").toggleClass("dropdown");
+								});
+								$(".hv>a").click(function(event){
+									event.preventDefault();
+									if($(this).parent().hasClass("dropdown")){
+										$(this).parent().removeClass("dropdown");
+										$(this).siblings().children().removeClass("dropdown");
+									}else{
+										$(this).parent().addClass("dropdown");
+										$(this).parent().siblings().removeClass("dropdown");
+										$(this).parent().siblings().children().children().removeClass("dropdown");
+									}
+									return false;
+								});
+								$(document).mouseup(function (e){
+									var container = $('.mnav_lv0 , .bar');
+									if (!container.is(e.target) && container.has(e.target).length === 0){
+										$('.mnav_lv0').removeClass('dropdown');
+									}
+								});
+							</script>
+							<form action="" method="get" class="form_search pull_right plr10">
+								<input type="text" name="q" placeholder="Nhập từ khóa tìm...">
+								<button type="submit" class="btn_st2"><i class="fa fa-search"></i></button>
+							</form>
+						</div>
+					</nav>
+				</div>
+			</div> 
+			<script>
+				$(window).bind('resize , load',function(){
+					var nav = $('.bot_hdr'),
+					height = $('.top_hdr').innerHeight();
+					$(window).scroll(function () {
+						if ($(this).scrollTop() > height) {
+							nav.addClass("f-nav");
+						} else {
+							nav.removeClass("f-nav");
+						}
+					});
+				});
+			</script>
+		</header>
+		<div class="content_for_layout clearfix" id="main">
+			<div class="slide_home fixf arr_bx2">
+				<a href=""><img src="img/1.jpg" alt="" class="imgf"></a>
+				<a href=""><img src="img/2.jpg" alt="" class="imgf"></a>
+			</div>
+			<script>
+				$(document).ready(function(){
+					$('.slide_home').slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						lazyload:"odemand",
+						autoplay: true,
+						dots:true,
+						arrows:true,
+						fade:false,
+						autoplaySpeed: 1000,
+					});
+				});
+			</script>
+			<div class="clear"></div>
+			<div class="block_cate section_1 fixf">
+				<div class="container">
+					<div class="row15">
+						<div class="wrapper_item text-center span4 span-m12 plr15 mb20">
+							<div class="item">
+								<div class="info">
+									<h5><a href="" title="">Nội thất</a></h5>
+								</div>
+								<div class="image">
+									<a href="" class="pa3x2" title=""><img src="img/3.jpg" alt="" class="fit-cover"></a>
+								</div>
+							</div>
+						</div>
+						<div class="wrapper_item text-center span4 span-m12 plr15 mb20">
+							<div class="item">
+								<div class="info">
+									<h5><a href="" title="">Nội thất</a></h5>
+								</div>
+								<div class="image">
+									<a href="" class="pa3x2" title=""><img src="img/3.jpg" alt="" class="fit-cover"></a>
+								</div>
+							</div>
+						</div>
+						<div class="wrapper_item text-center span4 span-m12 plr15 mb20">
+							<div class="item">
+								<div class="info">
+									<h5><a href="" title="">Nội thất</a></h5>
+								</div>
+								<div class="image">
+									<a href="" class="pa3x2" title=""><img src="img/3.jpg" alt="" class="fit-cover"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="block_cate section_2 fixf">
+				<div class="container">
+					<div class="row15">
+						<div class="wrapper_package span6 span-m12 plr15">
+							<div class="item">
+								<div class="image">
+									 <a href="" title="" class="pa3x1"><img src="img/4.jpg" alt="" class="fit-cover"></a>
+								</div>
+								<div class="info">
+									<h5><a href="" title="" class="text-nowrap text-upper">Thi công nhà phố phần thô trọn gói 2,7tr/m2</a></h5>
+								</div>
+							</div>
+						</div>
+						<div class="wrapper_package span6 span-m12 plr15">
+							<div class="item">
+								<div class="image">
+									 <a href="" title="" class="pa3x1"><img src="img/5.jpg" alt="" class="fit-cover"></a>
+								</div>
+								<div class="info">
+									<h5><a href="" title="" class="text-nowrap text-upper">Thi công nhà phố phần thô trọn gói 2,7tr/m2</a></h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="block_cate section_3 fixf">
+				<div class="container">
+					<div class="head_cate head text-center fixf pt5 pb25 mb30">
+						<h3 class="title_st1 text-upper">Dự án tiêu biểu</h3>
+					</div>
+					<div class="body_cate fixf">
+						<div class="row mb20" id="list_prj">
+							<ul>
+								<li class="wrapper_prj span4 span-m12 p10">
+									<a href="" class="pa3x2"><img src="img/6.jpg" alt="" class="fit-cover" data-caption="<div class='slip_title'>Bố trí nội thất căn hộ D15.04 Hưng Phúc, Quận 7 - Nhà chị Nhung</div>"></a>
+								</li>
+								<li class="wrapper_prj span4 span-m12 p10">
+									<a href="" class="pa3x2"><img src="img/6.jpg" alt="" class="fit-cover" data-caption="<div class='slip_title'>Bố trí nội thất căn hộ A3.16.05 Thanh Đa View, Quận Bình Thạnh - Nhà anh Thắng</div>"></a>
+								</li>
+								<li class="wrapper_prj span4 span-m12 p10">
+									<a href="" class="pa3x2"><img src="img/6.jpg" alt="" class="fit-cover" data-caption="<div class='slip_title'>Bố trí nội thất căn hộ P6.11 Vinhomes Central Park 3, Quận Bình Thạnh - Nhà chị Huyền</div>"></a>
+								</li>
+								<li class="wrapper_prj span4 span-m12 p10">
+									<a href="" class="pa3x2"><img src="img/6.jpg" alt="" class="fit-cover" data-caption="<div class='slip_title'>Bố trí nội thất căn hộ B6.08 Scenic Valley, PMH, Quận 7 - Nhà nghệ sĩ hài Chí Trung</div>"></a>
+								</li>
+								<li class="wrapper_prj span4 span-m12 p10">
+									<a href="" class="pa3x2"><img src="img/6.jpg" alt="" class="fit-cover" data-caption="<div class='slip_title'>Bố trí nội thất căn hộ D14.03 Scenic Valley, PMH, Quận 7 - Nhà ngoại cảm Phan Thị Bích Hằng</div>"></a>
+								</li>
+								<li class="wrapper_prj span4 span-m12 p10">
+									<a href="" class="pa3x2"><img src="img/6.jpg" alt="" class="fit-cover" data-caption="<div class='slip_title'>Bố trí nội thất căn hộ G16.17 Garden Gate, Phú Nhuận - Nhà chị Phương</div>"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer_cate fixf text-center mb20">
+						<a href="" class="link_more text-upper pt10 pb10 plr30" rel="nofollow">Xem thêm</a>
+					</div>
+					<script src="js/jquery.sliphover.min.js"></script>
+					<script type="text/javascript">
+					  $(function(){
+						 $('#list_prj').sliphover({
+							caption:'data-caption'
+						 });
+					})
+					</script>
+				</div>
+			</div>
+			<div class="clear"></div> 
+			<div class="block_cate section_4 fixf pt20 pb30">
+				<div class="container">
+					<div class="head_cate head text-center fixf pt5 pb25 mb30">
+						<h3 class="title_st1 text-upper">TIN TỨC - SỰ KIỆN</h3>
+					</div> 
+					<div class="body_cate fixf">
+						<div class="row15">
+							<div class="first_news span6 span-t12 span-m12 plr15 mb20">
+								<div class="wrapper_news fixf">
+									<div class="item_news dad fixf">
+										<div class="image">
+											<a href="" class="pa3x2"><img src="img/7.jpg" alt="" class="fit-cover"></a>
+										</div> 
+										<div class="info">
+											<h5><a href="" title="">Căn hộ P6-11 Vinhome Central Park 3, Quận Bình Thạnh - Nhà chị Huyền</a></h5>
+										</div> 
+									</div> 
+								</div> 
+							</div>
+							<div class="last_news span6 span-t12 span-m12 plr15">
+								<div class="wrapper_news fixf mb20">
+									<div class="item_news border_news fixf">
+										<div class="image span3p">
+											<a href="" title="" class="pa3x2"><img src="img/7.jpg" alt="" class="fit-cover"></a>
+										</div>
+										<div class="info span7p plr15 pt10 pb10">
+											<h5><a href="" title="" class="title_news text-nowrap">Anh Đức ký hợp đồng thi công căn hộ Hưng Phúc</a></h5>
+											<p class="des lmh40">Chung cư HƯNG PHÚC - Anh Đông nhờ Kaiso tư vấn thiết kế và thi công căn hộ</p>
+										</div>
+									</div>
+								</div>
+								<div class="wrapper_news fixf mb20">
+									<div class="item_news border_news fixf">
+										<div class="image span3p">
+											<a href="" title="" class="pa3x2"><img src="img/7.jpg" alt="" class="fit-cover"></a>
+										</div>
+										<div class="info span7p plr15 pt10 pb10">
+											<h5><a href="" title="" class="title_news text-nowrap">Anh Đức ký hợp đồng thi công căn hộ Hưng Phúc</a></h5>
+											<p class="des lmh40">Chung cư HƯNG PHÚC - Anh Đông nhờ Kaiso tư vấn thiết kế và thi công căn hộ</p>
+										</div>
+									</div>
+								</div>
+								<div class="wrapper_news fixf mb20">
+									<div class="item_news border_news fixf">
+										<div class="image span3p">
+											<a href="" title="" class="pa3x2"><img src="img/7.jpg" alt="" class="fit-cover"></a>
+										</div>
+										<div class="info span7p plr15 pt10 pb10">
+											<h5><a href="" title="" class="title_news text-nowrap">Anh Đức ký hợp đồng thi công căn hộ Hưng Phúc</a></h5>
+											<p class="des lmh40">Chung cư HƯNG PHÚC - Anh Đông nhờ Kaiso tư vấn thiết kế và thi công căn hộ</p>
+										</div>
+									</div>
+								</div>
+							</div> 
+						</div> 
+					</div> 
+					<div class="footer_cate fixf text-center mb20">
+						<a href="" class="link_more text-upper pt10 pb10 plr30" rel="nofollow">Xem thêm</a>
+					</div>
+				</div> 
+			</div> 
+			<div class="clear"></div> 
+			<div class="block_cate section_5 fixf">
+				<div class="container">
+					<div class="head_cate head text-center fixf pt5 pb25 mb30">
+						<h3 class="title_st2 text-upper">Cảm nhận khách hàng</h3>
+					</div> 
+					<div class="body_cate fixf">
+						<div class="slide_comment arr_comment">
+							<div class="item">
+								<div class="image">
+									<a href=""><img src="img/8.jpg" alt="" class="fit-cover"></a>
+								</div>
+								<div class="info text-center fixf">
+									<p class="des">
+										Văn phòng công ty chúng tôi thi công chỉ trong vòng 15 ngày với khối lượng công việc khá nhiều và điều kiện thi 
+										công khá khó khăn theo quy định chung của tòa nhà. Dù các bên đều khá mệt và lo lắng với tiến độ gấp rút, tuy nhiên,
+										đội ngũ nhân viên công ty Kaiso đã rất cố gắng để công việc kịp tiến độ.
+									</p>
+									<h5 class="name_custome">
+										<a href="" rel="nofollow">Anh Huỳnh Song</a>
+									</h5>
+									<p class="position">Tư vấn cấp cao tại Logistics</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="image">
+									<a href=""><img src="img/8.jpg" alt="" class="fit-cover"></a>
+								</div>
+								<div class="info text-center fixf">
+									<p class="des">
+										Văn phòng công ty chúng tôi thi công chỉ trong vòng 15 ngày với khối lượng công việc khá nhiều và điều kiện thi 
+										công khá khó khăn theo quy định chung của tòa nhà. Dù các bên đều khá mệt và lo lắng với tiến độ gấp rút, tuy nhiên,
+										đội ngũ nhân viên công ty Kaiso đã rất cố gắng để công việc kịp tiến độ.
+									</p>
+									<h5 class="name_custome">
+										<a href="" rel="nofollow">Anh Huỳnh Song</a>
+									</h5>
+									<p class="position">Tư vấn cấp cao tại Logistics</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="image">
+									<a href=""><img src="img/8.jpg" alt="" class="fit-cover"></a>
+								</div>
+								<div class="info text-center fixf">
+									<p class="des">
+										Văn phòng công ty chúng tôi thi công chỉ trong vòng 15 ngày với khối lượng công việc khá nhiều và điều kiện thi 
+										công khá khó khăn theo quy định chung của tòa nhà. Dù các bên đều khá mệt và lo lắng với tiến độ gấp rút, tuy nhiên,
+										đội ngũ nhân viên công ty Kaiso đã rất cố gắng để công việc kịp tiến độ.
+									</p>
+									<h5 class="name_custome">
+										<a href="" rel="nofollow">Vũ Đức Khôi</a>
+									</h5>
+									<p class="position">Tư vấn cấp cao tại Logistics</p>
+								</div>
+							</div>
+							<div class="item">
+								<div class="image">
+									<a href=""><img src="img/8.jpg" alt="" class="fit-cover"></a>
+								</div>
+								<div class="info text-center fixf">
+									<p class="des">
+										Văn phòng công ty chúng tôi thi công chỉ trong vòng 15 ngày với khối lượng công việc khá nhiều và điều kiện thi 
+										công khá khó khăn theo quy định chung của tòa nhà. Dù các bên đều khá mệt và lo lắng với tiến độ gấp rút, tuy nhiên,
+										đội ngũ nhân viên công ty Kaiso đã rất cố gắng để công việc kịp tiến độ.
+									</p>
+									<h5 class="name_custome">
+										<a href="" rel="nofollow">Anh Huỳnh Song</a>
+									</h5>
+									<p class="position">Tư vấn cấp cao tại Logistics</p>
+								</div>
+							</div>
+						</div>
+						<script>
+							$(document).ready(function(){
+								$('.slide_comment').slick({
+									slidesToShow: 1,
+									slidesToScroll: 1,
+									lazyload:"odemand",
+									autoplay: true,
+									dots:false,
+									arrows:true,
+									fade:false,
+									autoplaySpeed: 5000,
+									speed: 2000,
+								});
+							});
+						</script>
+					</div>
+					<div class="footer_cate fixf text-center mb20">
+						<a href="" class="link_more text-upper pt10 pb10 plr30" rel="nofollow">Xem thêm</a>
+					</div>
+				</div> 
+			</div> 
+			<div class="clear"></div> 
+			<div class="block_cate section_6 fixf">
+				<div class="container">
+					<div class="head_cate head_panel text-center fixf">
+						<h3 class="title_st5 text-upper dad">Đối tác của kaiso</h3>
+					</div> 
+					<div class="body_cate fixw">
+						<div class="row">
+							<ul class="fixf arr_bx trademark nostyle"> 
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/10.jpg" alt="" class="fit-contain"></a></li>
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/11.jpg" alt="" class="fit-contain"></a></li>
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/12.jpg" alt="" class="fit-contain"></a></li>
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/13.jpg" alt="" class="fit-contain"></a></li>
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/14.jpg" alt="" class="fit-contain"></a></li>
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/15.jpg" alt="" class="fit-contain"></a></li>
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/16.jpg" alt="" class="fit-contain"></a></li>
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/10.jpg" alt="" class="fit-contain"></a></li>
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/11.jpg" alt="" class="fit-contain"></a></li>											
+							</ul>	
+						</div>
+						<script>
+							$(document).ready(function(){
+								$('.trademark').slick({
+									slidesToShow: 6,
+									slidesToScroll: 1,
+									lazyload:"odemand",
+									autoplay: true,
+									dots:false,
+									arrows:false,
+									infinite: true,
+									swipeToSlide: true,
+									fade:false,
+									touchThreshold:10,	//width/value
+									autoplaySpeed: 0,
+									speed: 5000,
+									responsive: [
+										{ 
+											breakpoint: 1200,
+											settings: {
+												slidesToShow: 5,
+												slidesToScroll: 1,
+											}
+										},
+										{ 
+											breakpoint: 992,
+											settings: {
+												slidesToShow: 4,
+												slidesToScroll: 1,
+											} 
+										},
+										{ 
+											breakpoint: 768,
+											settings: {
+												slidesToShow: 2,
+												slidesToScroll: 1,
+											} 
+										},
+									]
+								});
+							});
+						</script>
+					</div> 
+				</div>
+			</div> 
+		</div>
+		<footer class="footer" id="footer">
+			<div class="top_ft fixf">
+				<div class="container">
+					<div class="row">
+						<div class="span6 span-t12 span-m12">
+							<div class="span7 span-t6 span-m12 plr10 mb20">
+								<h3 class="title_ft text-upper mb10">CÔNG TY CÔNG NGHỆ VÀ TRUYỀN THÔNG DIM GROUP</h3>
+								<div class="info">							
+									<p>Địa chỉ: số 19/52 đình bảng, từ sơn, bắc ninh.</p>
+									<p>hotline: 098 851 156</p>
+									<p>Email: support@dim.vn</p>
+									<p>website: d68.vn</p>
+								</div>						
+							</div>
+							<div class="span5 span-t6 span-m12 plr10 mb20">
+								<h3 class="title_ft text-upper mb10">Chính sách</h3>
+								<ul class="list_link">
+									<li><a href="">Chính sách đổi sản phẩm</a></li>
+									<li><a href="">Chính sách đổi sản phẩm</a></li>
+									<li><a href="">Chính sách đổi sản phẩm</a></li>
+									<li><a href="">Chính sách đổi sản phẩm</a></li>
+									<li><a href="">Chính sách đổi sản phẩm</a></li>							
+								</ul>						
+							</div>
+						</div>
+						<div class="span6 span-t12 span-m12">
+							<div class="span5 span-t6 span-m12 plr10 mb20">
+								<h3 class="title_ft text-upper mb10">Liên kết</h3>
+								<ul class="social_group fixf">
+									<li><a href="" class="sc_facebook"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="" class="sc_twitter"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="" class="sc_google"><i class="fa fa-google-plus"></i></a></li>
+									<li><a href="" class="sc_youtube"><i class="fa fa-youtube"></i></a></li>							
+								</ul>						
+							</div>
+							<div class="span7 span-t6 span-m12 plr10 mb20">
+								<h3 class="title_ft text-upper mb10">Fanpage</h3>
+								<div class="fixf">
+									<div class="fb-page fix_wfb" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bot_ft fixf">
+				<div class="container">
+					<p>© Copyright Dimgroup</p>
+					<p style="float:right">Design by <a href="http://dim.vn/" target="_blank" style="color:#fff">DIM Group</a></p>
+				</div>
+			</div>
+		</footer>
+		<div class="move_control">
+			<a href="#top" class="scroll_top"><i class="fa fa-chevron-up"></i></a>
+		</div>
+		<div id="fb-root"></div>
+		<script>
+		function fixwfb(){
+			$('.fix_wfb').each(function(){
+			   $(this).attr('data-width',$(this).parent().width());
+			});
+		}
+		$(window).bind('ready resize load',function(){
+			fixwfb();
+		});
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		$("a[href='#top']").click(function() {
+			$("html, body").animate({ scrollTop: 0 },"fast");
+			return false;
+		});
+		$(window).scroll(function(){
+			var scroll=$(window).scrollTop(); 
+			if(scroll>=100){
+				$(".scroll_top").addClass("show2"); 
+				$(".scroll_bot").addClass("show2")}else{$(".scroll_top").removeClass("show2")
+			}
+		});
+		</script>
+	</div>
+</body>
+</html>
