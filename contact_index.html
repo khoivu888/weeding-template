@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html itemscope itemtype="https://schema.org/WebSite" lang="vi">  
+<head>
+    <title>kaiso.vn</title>
+    <meta charset="UTF-8">
+    <meta name="robots" content="INDEX,FOLLOW">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/page-1.0.2.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script language="javascript" src="js/jquery.min.js"></script>
+	<script language="javascript" src="js/slick.min.js"></script>
+</head>
+<body>
+	<div class="wrapper" id="wrapper">
+		<header class="header" id="header">
+			<div class="top_hdr fixf">
+				<div class="container">
+					<h1 class="logo">
+						<a href=""><img src="img/logo.png" alt="">đây là logo của bạn</a>
+					</h1>
+					<div class="slogan m-off">
+						<img src="img/slogan.png" alt="">
+					</div> 
+					<h2 class="hotline pull_right m-off">			
+						Hotline:<a href="" rel="nofollow">0917.578.677</a> 
+					</h2>
+				</div>
+			</div> 
+			<div class="bot_hdr fixf">
+				<div class="container">
+					<nav>
+						<div class="row">
+							<ul class="nav_lv0 t-off m-off">
+								<li class="active"><a href="index.html" rel="nofollow">Trang chủ</a></li>
+								<li><a href="">Giới thiệu</a></li>
+								<li><a href="product_index.html">Kiến trúc</a>
+									<ul class="nav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li><a href="product_index.html">Nội thất</a>
+									<ul class="nav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li><a href="product_index.html">Cảnh quan</a></li>
+								<li><a href="news_index.html">Kiến thức</a>
+									<ul class="nav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li><a href="news_index.html">Phong thủy</a></li>
+								<li><a href="news_index.html">Tin tức</a></li>
+								<li><a href="news_index.html">Tuyển dụng</a></li>
+								<li><a href="contact_index.html">Liên hệ</a></li>
+							</ul>
+							<div class="bar"><span><i class="fa fa-bars" aria-hidden="true"></i></span></div>
+							<ul class="mnav_lv0">
+								<li><a href="" rel="nofollow">Trang chủ</a></li>
+								<li class="hv"><a href="">Kiến trúc</a>
+									<ul class="mnav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li class="hv"><a href="">Nội thất</a>
+									<ul class="mnav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li><a href="">Cảnh quan</a></li>
+								<li class="hv"><a href="">Kiến thức</a>
+									<ul class="mnav_lv1">
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+										<li><a href="">demo lv1</a></li>
+									</ul>
+								</li>
+								<li><a href="">Phong thủy</a></li>
+								<li><a href="">Tin tức</a></li>
+								<li><a href="">Tuyển dụng</a></li>
+								<li><a href="">Liên hệ</a></li>
+							</ul>
+							<script>
+								$(".bar>span").click(function(){
+									$(".mnav_lv0").toggleClass("dropdown");
+								});
+								$(".hv>a").click(function(event){
+									event.preventDefault();
+									if($(this).parent().hasClass("dropdown")){
+										$(this).parent().removeClass("dropdown");
+										$(this).siblings().children().removeClass("dropdown");
+									}else{
+										$(this).parent().addClass("dropdown");
+										$(this).parent().siblings().removeClass("dropdown");
+										$(this).parent().siblings().children().children().removeClass("dropdown");
+									}
+									return false;
+								});
+								$(document).mouseup(function (e){
+									var container = $('.mnav_lv0 , .bar');
+									if (!container.is(e.target) && container.has(e.target).length === 0){
+										$('.mnav_lv0').removeClass('dropdown');
+									}
+								});
+							</script>
+							<form action="" method="get" class="form_search pull_right plr10">
+								<input type="text" name="q" placeholder="Nhập từ khóa tìm...">
+								<button type="submit" class="btn_st2"><i class="fa fa-search"></i></button>
+							</form>
+						</div>
+					</nav>
+				</div>
+			</div> 
+			<script>
+				$(window).bind('resize , load',function(){
+					var nav = $('.bot_hdr'),
+					height = $('.top_hdr').innerHeight();
+					$(window).scroll(function () {
+						if ($(this).scrollTop() > height) {
+							nav.addClass("f-nav");
+						} else {
+							nav.removeClass("f-nav");
+						}
+					});
+				});
+			</script>
+		</header>
+		<div class="content_for_layout clearfix" id="main">
+			<div class="breadcrumb">
+				<div class="container">
+					<ul class="fixf">
+						<li><a href="">Trang chủ</a></li>
+						<li> Liên hệ</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="container">
+				<div class="block_contact fixf">
+					<div class="head_contact head text-center fixf pt5 pb25 mb10">
+						<h3 class="title_st1 text-upper">Bản đồ</h3>
+					</div>			
+					<div class="body_contact maps fixf mb20">
+						<div id="map">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1564.794272996774!2d105.96497045400378!3d21.12336911601549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313507d9b5740e7f%3A0x8a36ed7a1e38391a!2s10%2C+54!5e0!3m2!1svi!2s!4v1503039760665" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
+					</div>				
+				</div>
+				<div class="clear"></div>	
+				<div class="row15">
+					<div class="block_contact span8 span-t12 span-m12 plr15 mb30">
+						<div class="head_contact head text-center fixf pt5 pb25 mb10">
+							<h3 class="title_st1 text-upper">Liên hệ với chúng tôi</h3>
+						</div>
+						<form class="body_contact form_cart form_group fixf mb40">
+							<div class="row15">
+								<div class="span6 span-m12 plr15">
+									<div class="title_ct fixf mb10">
+										<input type="text" class="f_style_1 o0" name="title" id="title" maxlength="200" placeholder="nhập tiêu đề...">
+									</div>		
+									<div class="name fixf mb10">
+										<input type="text" name="" placeholder="Nhập tên..." class="f_style_1 o0">
+									</div>
+									<div class="phone fixf mb10">
+										<input type="text" name="" placeholder="Nhập số điện thoại..." class="f_style_1 o0" required pattern="(\+84|0)\d{9,10}"/>
+									</div>
+									<div class="email fixf mb10">
+										<input type="text" name="" placeholder="Nhập địa chỉ email..." class="f_style_1 o0" required pattern="[a-zA-Z0-9_\.]+@[a-zA-Z]+\.[a-zA-Z]+(\.[a-zA-Z]+)*"/>
+									</div>
+								</div>
+								<div class="span6 span-m12 plr15">
+									<div class="descrip fixf mb10">
+										<textarea class="f_style_1 o0" rows="5" name="" placeholder="Nhập Ghi chú..."></textarea>
+									</div>
+									<div class="fixf">
+										<div class="fixf mb10">
+											<div class="g-recaptcha" data-sitekey="6LdsICMTAAAAANAj8vthtH3m94eI8NZS6Cbxna_f">
+												<div style="width: 304px; height: 78px;">
+													<div>
+														<iframe src="https://www.google.com/recaptcha/api2/anchor?k=6LdsICMTAAAAANAj8vthtH3m94eI8NZS6Cbxna_f&amp;co=aHR0cDovL2QyNC5zaWV1d2Vicy5jb206ODA.&amp;hl=vi&amp;v=r20170206171236&amp;size=normal&amp;cb=vh1xabsp0kv0" title="tiện ích con mã xác thực lại" width="304" height="78" frameborder="0" scrolling="no" name="undefined"></iframe>
+													</div>
+													<textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea>
+												</div>
+											</div>
+										</div>
+									</div>	
+								</div>								
+								<div class="center fixf plr15 mb10">
+									<button type="submit" class="f_style_1 o0">Gửi thông tin</button>
+								</div>
+							</div>
+						</form>					
+					</div>
+					<div class="block_contact span4 span-t12 span-m12 plr15 mb30">
+						<div class="head_contact head text-center fixf pt5 pb25 mb10">
+							<h3 class="title_st1 text-upper">Đia chỉ liên hệ</h3>
+						</div>						
+						<div class="body_contact fixf mb40">
+							<h4>Công ty công nghệ và truyền thông Dimgroup</h4>
+							<p><strong><i class="fa fa-map-marker" aria-hidden="true"></i></strong> Số 19 ngõ 52 Khu phố Thượng, Từ Sơn, Bắc Ninh.</p>
+							<p><strong><i class="fa fa-phone" aria-hidden="true"></i></strong> 098 851 156</p>
+							<p><strong><i class="fa fa-envelope" aria-hidden="true"></i></strong> support@dim.vn</p>
+							<p><strong><i class="fa fa-globe" aria-hidden="true"></i></strong>d68.vn</p>				
+						</div>						
+					</div>					
+				</div>
+				
+			</div>
+			<div class="clear"></div> 
+			<div class="block_cate section_6 fixf">
+				<div class="container">
+					<div class="head_cate head_panel text-center fixf">
+						<h3 class="title_st5 text-upper">Đối tác của kaiso</h3>
+					</div> 
+					<div class="body_cate fixw">
+						<div class="row">
+							<ul class="fixf arr_bx trademark nostyle"> 
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/10.jpg" alt="" class="fit-contain"></a></li>
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/11.jpg" alt="" class="fit-contain"></a></li>
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/12.jpg" alt="" class="fit-contain"></a></li>
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/13.jpg" alt="" class="fit-contain"></a></li>
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/14.jpg" alt="" class="fit-contain"></a></li>
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/15.jpg" alt="" class="fit-contain"></a></li>
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/16.jpg" alt="" class="fit-contain"></a></li>
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/10.jpg" alt="" class="fit-contain"></a></li>
+								<li class="p10"><a href="" class="pa16x9 o0 text-center"><img src="img/11.jpg" alt="" class="fit-contain"></a></li>							
+							</ul>	
+						</div>
+						<script>
+							$(document).ready(function(){
+								$('.trademark').slick({
+									slidesToShow: 6,
+									slidesToScroll: 1,
+									lazyload:"odemand",
+									autoplay: true,
+									dots:false,
+									arrows:false,
+									infinite: true,
+									swipeToSlide: true,
+									fade:false,
+									touchThreshold:10,	//width/value
+									autoplaySpeed: 5000,
+									responsive: [
+										{ 
+											breakpoint: 1200,
+											settings: {
+												slidesToShow: 5,
+												slidesToScroll: 1,
+											}
+										},
+										{ 
+											breakpoint: 992,
+											settings: {
+												slidesToShow: 4,
+												slidesToScroll: 1,
+											} 
+										},
+										{ 
+											breakpoint: 768,
+											settings: {
+												slidesToShow: 2,
+												slidesToScroll: 1,
+											} 
+										},
+									]
+								});
+							});
+						</script>
+					</div> 
+				</div>
+			</div> 
+		</div>
+		<footer class="footer" id="footer">
+			<div class="top_ft fixf">
+				<div class="container">
+					<div class="row">
+						<div class="span6 span-t12 span-m12">
+							<div class="span7 span-t6 span-m12 plr10 mb20">
+								<h3 class="title_ft text-upper mb10">CÔNG TY CÔNG NGHỆ VÀ TRUYỀN THÔNG DIM GROUP</h3>
+								<div class="info">							
+									<p>Địa chỉ: số 19/52 đình bảng, từ sơn, bắc ninh.</p>
+									<p>hotline: 098 851 156</p>
+									<p>Email: support@dim.vn</p>
+									<p>website: d68.vn</p>
+								</div>						
+							</div>
+							<div class="span5 span-t6 span-m12 plr10 mb20">
+								<h3 class="title_ft text-upper mb10">Chính sách</h3>
+								<ul class="list_link">
+									<li><a href="">Chính sách đổi sản phẩm</a></li>
+									<li><a href="">Chính sách đổi sản phẩm</a></li>
+									<li><a href="">Chính sách đổi sản phẩm</a></li>
+									<li><a href="">Chính sách đổi sản phẩm</a></li>
+									<li><a href="">Chính sách đổi sản phẩm</a></li>							
+								</ul>						
+							</div>
+						</div>
+						<div class="span6 span-t12 span-m12">
+							<div class="span5 span-t6 span-m12 plr10 mb20">
+								<h3 class="title_ft text-upper mb10">Liên kết</h3>
+								<ul class="social_group fixf">
+									<li><a href="" class="sc_facebook"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="" class="sc_twitter"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="" class="sc_google"><i class="fa fa-google-plus"></i></a></li>
+									<li><a href="" class="sc_youtube"><i class="fa fa-youtube"></i></a></li>							
+								</ul>						
+							</div>
+							<div class="span7 span-t6 span-m12 plr10 mb20">
+								<h3 class="title_ft text-upper mb10">Fanpage</h3>
+								<div class="fixf">
+									<div class="fb-page fix_wfb" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bot_ft fixf">
+				<div class="container">
+					<p>© Copyright Dimgroup</p>
+					<p style="float:right">Design by <a href="http://dim.vn/" target="_blank" style="color:#fff">DIM Group</a></p>
+				</div>
+			</div>
+		</footer>
+		<div class="move_control">
+			<a href="#top" class="scroll_top"><i class="fa fa-chevron-up"></i></a>
+		</div>
+		<div id="fb-root"></div>
+		<script>
+		function fixwfb(){
+			$('.fix_wfb').each(function(){
+			   $(this).attr('data-width',$(this).parent().width());
+			});
+		}
+		$(window).bind('ready resize load',function(){
+			fixwfb();
+		});
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		$("a[href='#top']").click(function() {
+			$("html, body").animate({ scrollTop: 0 },"fast");
+			return false;
+		});
+		$(window).scroll(function(){
+			var scroll=$(window).scrollTop(); 
+			if(scroll>=100){
+				$(".scroll_top").addClass("show2"); 
+				$(".scroll_bot").addClass("show2")}else{$(".scroll_top").removeClass("show2")
+			}
+		});
+		</script>
+	</div>
+</body>
+</html>
